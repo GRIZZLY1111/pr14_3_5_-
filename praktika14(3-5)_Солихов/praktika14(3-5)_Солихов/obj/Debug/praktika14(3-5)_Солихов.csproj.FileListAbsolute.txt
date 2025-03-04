@@ -1,0 +1,10 @@
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\bin\Debug\praktika14(3-5)_Солихов.exe.config
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\bin\Debug\praktika14(3-5)_Солихов.exe
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\bin\Debug\praktika14(3-5)_Солихов.pdb
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\obj\Debug\praktika14(3-5)_Солихов.csproj.AssemblyReference.cache
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\obj\Debug\praktika14_3_5__Солихов.Form1.resources
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\obj\Debug\praktika14_3_5__Солихов.Properties.Resources.resources
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\obj\Debug\praktika14(3-5)_Солихов.csproj.GenerateResource.cache
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\obj\Debug\praktika14(3-5)_Солихов.csproj.CoreCompileInputs.cache
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\obj\Debug\praktika14(3-5)_Солихов.exe
+C:\Солихов ПР-21\praktika14(3-5)_Солихов\praktika14(3-5)_Солихов\obj\Debug\praktika14(3-5)_Солихов.pdb
