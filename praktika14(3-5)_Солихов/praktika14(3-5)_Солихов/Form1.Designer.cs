@@ -146,11 +146,12 @@ namespace praktika14_3_5__Солихов
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(647, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(187, 33);
             this.button3.TabIndex = 12;
-            this.button3.Text = "button3";
+            this.button3.Text = "Сортировка";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

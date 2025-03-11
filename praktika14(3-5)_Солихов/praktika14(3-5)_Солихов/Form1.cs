@@ -130,67 +130,50 @@ namespace praktika14_3_5__Солихов
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (File.Exists("t.txt"))
+            try
             {
-                StreamReader si = File.OpenText("t.txt");
+                dataGridView1.Rows.Clear();
+                var people = File.ReadAllLines("1.txt");
+                var age = File.ReadAllLines("2.txt");
+                if (people.Length != age.Length)
                 {
-                    while (true)
+                    MessageBox.Show("Количество строк в файлах не совпадает");
+                    return;
+                }
+                Queue<dynamic> queue = new Queue<dynamic>();
+                for (int i = 0; i < people.Length; i++)
+                {
+                    var name = people[i].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    var ageves = age[i].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (name.Length == 3 && ageves.Length == 2)
                     {
-                        string st = si.ReadLine();
-                        if (st == null)
+                        queue.Enqueue(new
                         {
-                            break;
-                        }
-                        string[] chelovek = st.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                        var age = chelovek.Skip(3).Take(1);
-                        foreach (string i in age)
-                        {
-                            int vozr = Convert.ToInt32(i);
-                            if (vozr < 40)
-                            {
-                                for (int j = 0; j < chelovek.Length; j++)
-                                {
-                                    sotrudniki.Enqueue(chelovek[j]);
-                                }
-                            }
-                            else
-                            {
-                                for (int j = 0; j < chelovek.Length; j++)
-                                {
-                                    sotrudnikist40.Enqueue(chelovek[j]);
-                                }
-                            }
-                        }
+                            familia = name[0],
+                            Name = name[1],
+                            dadname = name[2],
+                            age = int.Parse(ageves[0]),
+                            ves = int.Parse(ageves[1]),
+                            FirstFamilia = name[0][0]
+                        });
                     }
-                    si.Close();
-                    int k = 0, l = 0;
-                    dataGridView1.ColumnCount = 5;
-                    dataGridView1.RowCount = ((sotrudniki.Count / 5) + (sotrudnikist40.Count / 5));
-                    while (sotrudniki.Count != 0)
+                    else
                     {
-                        dataGridView1.Rows[k].Cells[l].Value = sotrudniki.Dequeue();
-                        l++;
-                        if (l == 5)
-                        {
-                            l = 0;
-                            k++;
-                        }
+                        MessageBox.Show("В файлах не хватает информации о человеке");
                     }
-                    while (sotrudnikist40.Count != 0)
+                }
+                var grpeople = queue.OrderBy(p => p.age).GroupBy(p => p.FirstFamilia);
+                foreach (var group in grpeople)
+                {
+                    foreach (var person in group)
                     {
-                        dataGridView1.Rows[k].Cells[l].Value = sotrudnikist40.Dequeue();
-                        l++;
-                        if (l == 5)
-                        {
-                            l = 0;
-                            k++;
-                        }
+                        dataGridView1.Rows.Add(person.familia, person.Name, person.dadname, person.age, person.ves);
                     }
                 }
             }
-            else
+            catch
             {
-                Console.WriteLine("Такой файл не существует");
+                MessageBox.Show("Невернный ввод из файла");
             }
         }
     }
